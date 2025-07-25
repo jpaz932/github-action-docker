@@ -21,7 +21,7 @@ jobs:
     - name: login docker
       env:
         DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
-        DOCKERHUB_PASSWORD: ${{ secrets.v }}
+        DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
       run: |
         echo "Authenticating..."
         docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
