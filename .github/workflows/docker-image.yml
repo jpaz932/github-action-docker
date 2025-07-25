@@ -25,7 +25,7 @@ jobs:
       run: docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
 
     - name: Build docker image
-      run: docker image -t ${{ vars.DOCKERHUB_REPO }}:0.0.2 .
+      run: docker -t ${{ vars.DOCKERHUB_REPO }}:0.0.2 .
 
     - name: Push docker image
       run: docker push ${{ vars.DOCKERHUB_REPO }}:0.0.2
